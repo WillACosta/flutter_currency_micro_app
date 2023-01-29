@@ -1,0 +1,35 @@
+name: flutter_currency_micro_app
+packages:
+  - "app/**"
+  - "packages/**"
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  postbootstrap: dart pub run build_runner build
+
+  analyze:
+    run: melos exec -- "flutter analyze"
+    description: Run `flutter analyze` in all packages
+
+  format:
+    run: melos exec -- "flutter format . --set-exit-if-changed"
+    description: Run `flutter format .` in all packages
+
+  test:
+    run: melos exec --dir-exists=test -- "flutter test"
+    description: Run `flutter test` in all packages
+
+  dependency_graph:
+    run: melos list --graph
+    description: See all local dependencies of modules
+
+  clean:
+    run: melos clean
+    description: Clean all workspaces
+
+  generate:flutter:
+    run: melos exec -c 1 --depends-on="build_runner" --flutter -- "flutter pub run build_runner build --delete-conflicting-outputs"
+    description: Build all generated files for Flutter packages in this project.

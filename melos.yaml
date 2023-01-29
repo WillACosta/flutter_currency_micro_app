@@ -8,7 +8,7 @@ command:
     usePubspecOverrides: true
 
 scripts:
-  postbootstrap: dart pub run build_runner build
+  postbootstrap: flutter pub run build_runner build -d
 
   analyze:
     run: melos exec -- "flutter analyze"

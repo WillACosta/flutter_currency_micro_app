@@ -1,0 +1,36 @@
+name: core_data
+description: A new Flutter package project.
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  core_dependencies:
+    path: '../core_dependencies'
+
+  core_commons:
+    path: '../core_commons'
+
+  core_network:
+    path: '../core_network'
+
+  core_domain:
+    path: '../core_domain'
+
+  core_test:
+    path: '../core_test'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  mocktail: ^0.3.0
+
+flutter:

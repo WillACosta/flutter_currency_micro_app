@@ -18,9 +18,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  core_dev_dependencies:
-    path: '../core_dev_dependencies'
-
   chopper_generator: ^6.0.0
   build_runner: ^2.3.3
 

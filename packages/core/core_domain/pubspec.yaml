@@ -1,0 +1,23 @@
+name: core_domain
+description: Domain and bussines rules for the project
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  core_dependencies:
+    path: '../core_dependencies'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:

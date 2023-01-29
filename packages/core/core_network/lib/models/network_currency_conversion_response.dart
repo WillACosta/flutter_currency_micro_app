@@ -10,14 +10,14 @@ class NetworkCurrencyConversionResponse extends Equatable {
   final HashMap<String, Rates> rates;
   final String status;
 
-  NetworkCurrencyConversionResponse(
-    this.baseCurrencyCode,
-    this.baseCurrencyName,
-    this.amount,
-    this.updatedDate,
-    this.rates,
-    this.status,
-  );
+  NetworkCurrencyConversionResponse({
+    required this.baseCurrencyCode,
+    required this.baseCurrencyName,
+    required this.amount,
+    required this.updatedDate,
+    required this.rates,
+    required this.status,
+  });
 
   @override
   List<Object?> get props => [
@@ -31,12 +31,12 @@ class NetworkCurrencyConversionResponse extends Equatable {
 
   factory NetworkCurrencyConversionResponse.fromMap(Map<String, dynamic> map) {
     return NetworkCurrencyConversionResponse(
-      map['baseCurrencyCode'] ?? '',
-      map['baseCurrencyName'] ?? '',
-      map['amount'] ?? '',
-      DateTime.fromMillisecondsSinceEpoch(map['updatedDate']),
-      HashMap<String, Rates>.from(map['rates']),
-      map['status'] ?? '',
+      baseCurrencyCode: map['baseCurrencyCode'] ?? '',
+      baseCurrencyName: map['baseCurrencyName'] ?? '',
+      amount: map['amount'] ?? '',
+      updatedDate: DateTime.fromMillisecondsSinceEpoch(map['updatedDate']),
+      rates: HashMap<String, Rates>.from(map['rates']),
+      status: map['status'] ?? '',
     );
   }
 }

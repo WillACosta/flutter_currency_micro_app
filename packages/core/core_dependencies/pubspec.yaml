@@ -9,8 +9,13 @@ environment:
 
 dependencies:
   chopper: ^6.0.0
-
+  get_it: ^7.2.0
+  injectable: ^2.1.0
   equatable: ^2.0.5
+  fpdart: ^0.4.0
+  freezed_annotation: ^2.2.0
+  http: ^0.13.5
+
   flutter:
     sdk: flutter
 

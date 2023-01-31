@@ -17,6 +17,15 @@ dependencies:
   core_network:
     path: '../core_network'
 
+  core_data:
+    path: '../core_data'
+
+  core_commons:
+    path: '../core_commons'
+
+  core_domain:
+    path: '../core_domain'
+
   mocktail: ^0.3.0
 
 dev_dependencies:

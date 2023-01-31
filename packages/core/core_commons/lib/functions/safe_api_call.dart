@@ -17,6 +17,6 @@ AsyncEither<T> safeApiCall<T>(
       (data) => Right(data.body as T),
     );
   } catch (e) {
-    return const Left(Failure.unexpected());
+    return Left(Failure.unexpected(e.toString()));
   }
 }

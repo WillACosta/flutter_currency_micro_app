@@ -1,4 +1,2 @@
-import 'package:core_network/core_network.dart';
-import 'package:mocktail/mocktail.dart';
-
-class MockCurrencyApiService extends Mock implements CurrencyApiService {}
+export 'mock_dependencies.dart';
+export 'mock_currencies.dart';

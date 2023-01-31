@@ -3,4 +3,10 @@ import 'package:core_domain/core_domain.dart';
 
 abstract class CurrencyRepository {
   AsyncEither<Currencies> listCurrencies();
+
+  AsyncEither<CurrencyRates> convertCurrency({
+    required String from,
+    required String to,
+    required String amount,
+  });
 }

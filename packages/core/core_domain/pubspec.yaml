@@ -14,10 +14,23 @@ dependencies:
   core_dependencies:
     path: '../core_dependencies'
 
+  core_commons:
+    path: '../core_commons'
+
+  core_data:
+    path: '../core_data'
+
+  core_test:
+    path: '../core_test'
+
+  core_network:
+    path: '../core_network'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  mocktail: ^0.3.0
   flutter_lints: ^2.0.0
 
 flutter:

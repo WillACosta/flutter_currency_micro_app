@@ -3,7 +3,7 @@
 Currency Converter App, provides an simple way to convert any currencies. The main idea
 for this project, is for studying and apply modularization with mono-repo and
 managed by Melos CLI, it follows some development best practices, such as Clean
-Architecture, Clean Code, SOLID, and more.
+Architecture, Clean Code, SOLID, and even more.
 
 It is a **work in progress** 🚧
 
@@ -59,7 +59,7 @@ As you can see bellow:
   |  |  |__core...
   |  |
   |  |__feature
-  |  |  |__feature...
+  |     |__feature...
   |
   |_melos.yaml
 ```

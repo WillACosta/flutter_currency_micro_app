@@ -7,11 +7,23 @@ Architecture, Clean Code, SOLID, and even more.
 
 It is a **work in progress** 🚧
 
+# Content
+
+- **[Features](#features)**
+- **[Screenshots](##screenshots)**
+- **[App Modularization Guide](#app-modularization-guide)**
+<!-- - **[Technical Resources](#technical-resources)**
+- **[How to Use](#how-to-use)**
+- **[Ui and Design](#ui-and-design)**
+- **[App Flow Sample](#app-flow-sample)** -->
+
+<br>
+
 # Features
 
 The project has only two features, called `:feature_conversion` and
-`:feature_currencies_list`, you can see more details in the app modularization
-guide.
+`:feature_currencies_list`, you can see more details in the [app modularization
+guide](#app-modularization-guide).
 
 ## Screenshots
 
@@ -28,8 +40,9 @@ A module graph of currency app, the arrows flow indicates the dependency way.
 
 The project contains the following types of modules:
 
-- The `app` module - is the main entry point for app, and in this module has
-  all code related to app level, such navigation and other similar things.
+- The `app` module - is the main entry point for the app, this module contains
+  all the app level code, such as navigation, dependency injection setting, state
+  management and other similar things.
 
 - `feature` modules - contains specific modules which has a single responsibility
   and should have no dependencies on other `feature` modules. They only depend on
@@ -42,11 +55,11 @@ The project contains the following types of modules:
 All these modules are managed by Melos CLI, with this tool, we have more control
 over the dependencies in the whole project and executes common tasks in all modules
 in the same time -- [know more about Melos here](https://melos.invertase.dev/).
-You can see, some scripts that is used by project on `melos.yaml` file in the
+You can see, some scripts that is used by the project on `melos.yaml` file in the
 root directory.
 
 As a mentioned above, the project uses an mono-repo approach to organize all
-the modules, this means that, all the necessary modules exists inside this repository.
+the modules, this means that all the necessary modules exists inside this repository.
 As you can see bellow:
 
 ```

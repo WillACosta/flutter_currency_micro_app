@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  feather_icons: ^1.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

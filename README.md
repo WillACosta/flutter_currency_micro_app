@@ -1,6 +1,14 @@
-<h1></h1><br>
+<h1 align="center">
+  <img align="center" width ='80px' src="./app/assets/images/logo.png" alt="logo">
+</h1>
 
-Currency Converter App, provides an simple way to convert any currencies. The main idea
+<p align="center">
+  <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+  <a href="https://medium.com/@willAmaral"><img alt="Medium" src="https://skydoves.github.io/badges/Story-Medium.svg"/></a>
+  <a href="https://www.instagram.com/wiidev/"><img alt="Instagram Profile" src="https://badges.aleen42.com/src/instagram.svg"/></a>
+</p>
+
+Currency Converter App, provides a simple way to convert any currency. The main idea
 for this project, is for studying and apply modularization with mono-repo and
 managed by Melos CLI, it follows some development best practices, such as Clean
 Architecture, Clean Code, SOLID, and even more.
@@ -12,9 +20,9 @@ It is a **work in progress** 🚧
 - **[Features](#features)**
 - **[Screenshots](##screenshots)**
 - **[App Modularization Guide](#app-modularization-guide)**
-<!-- - **[Technical Resources](#technical-resources)**
-- **[How to Use](#how-to-use)**
+- **[Technical Resources](#technical-resources)**
 - **[Ui and Design](#ui-and-design)**
+<!-- - **[How to Use](#how-to-use)**
 - **[App Flow Sample](#app-flow-sample)** -->
 
 <br>
@@ -84,3 +92,12 @@ Some advantages of this approach:
 - Keep everything stored in one place, which saves a lot of time, when is searching
   for specific module
 - Enforces layered architecture, because all the packages refers to an specific layer
+
+# Ui and Design
+
+The app was designed with an simple and minimalist purpose, we use the concepts
+of design tokens and atomic design, you can find more about in the
+[figma file](https://www.figma.com/file/aBGCDeRuqnngXxhlY4p2O9/Currency-Converter-App-Case-Study?node-id=45%3A39&t=5egYOZqyjrlwngih-1).
+
+The app has supports for dark and light mode, you can find all components and tokens
+in the `:core_ui` package.

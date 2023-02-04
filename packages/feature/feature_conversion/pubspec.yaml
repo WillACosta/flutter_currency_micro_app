@@ -1,7 +1,7 @@
 name: feature_conversion
 description: Feature module for currency conversion
-version: 0.0.1
 publish_to: none
+version: 0.0.1
 
 environment:
   sdk: '>=2.19.0 <3.0.0'
@@ -11,9 +11,13 @@ dependencies:
   flutter:
     sdk: flutter
 
+  core_domain:
+    path: '../../core/core_domain'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^2.0.0
 
 flutter:

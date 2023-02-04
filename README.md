@@ -21,7 +21,7 @@ It is a **work in progress** 🚧
 - **[Screenshots](##screenshots)**
 - **[App Modularization Guide](#app-modularization-guide)**
 - **[Technical Resources](#technical-resources)**
-- **[Ui and Design](#ui-and-design)**
+- **[UI and Design](#ui-and-design)**
 <!-- - **[How to Use](#how-to-use)**
 - **[App Flow Sample](#app-flow-sample)** -->
 
@@ -93,7 +93,7 @@ Some advantages of this approach:
   for specific module
 - Enforces layered architecture, because all the packages refers to an specific layer
 
-# Ui and Design
+# UI and Design
 
 The app was designed with an simple and minimalist purpose, we use the concepts
 of design tokens and atomic design, you can find more about in the

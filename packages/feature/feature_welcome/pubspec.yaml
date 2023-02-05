@@ -1,5 +1,5 @@
-name: feature_conversion
-description: Feature module for currency conversion
+name: feature_welcome
+description: Welcome feature for the app
 publish_to: none
 version: 0.0.1
 
@@ -11,16 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-  core_domain:
-    path: '../../core/core_domain'
-
-  core_ui:
-    path: '../../core/core_ui'
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^2.0.0
 
 flutter:

@@ -36,9 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                   ],
                 ),
                 const Spacer(),
-                const CButton(
-                  borderRadius: CBorderRadius.xl,
-                  padding: CSpacingInsets.sm,
+                const CButton.floating(
                   child: Icon(
                     CIcons.chevronRight,
                     size: 30,

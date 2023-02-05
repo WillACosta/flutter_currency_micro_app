@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:feature_currencies_list/feature_currencies_list.dart';
 import 'package:feature_welcome/feature_welcome.dart';
 
 class CurrencyApp extends StatelessWidget {
@@ -12,7 +14,7 @@ class CurrencyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomeScreen(),
+      home: const CurrenciesListScreen(),
     );
   }
 }

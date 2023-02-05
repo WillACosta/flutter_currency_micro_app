@@ -1,18 +1,33 @@
-import 'package:core_ui/tokens/tokens.dart';
 import 'package:flutter/material.dart';
+
+import '../../core_ui.dart';
 
 class CButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final Widget? child;
+  final String? labelText;
+  final bool fullWidth;
   final BorderRadiusGeometry borderRadius;
-  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry padding;
 
   const CButton({
     super.key,
     this.onPressed,
     this.child,
-    this.borderRadius = BorderRadius.zero,
-    this.padding,
+    this.borderRadius = CBorderRadius.xl,
+    this.padding = CSpacingInsets.sm,
+    this.fullWidth = true,
+    this.labelText,
+  });
+
+  const CButton.floating({
+    super.key,
+    this.onPressed,
+    this.child,
+    this.borderRadius = CBorderRadius.lg,
+    this.padding = CSpacingInsets.sm,
+    this.fullWidth = false,
+    this.labelText,
   });
 
   @override
@@ -30,7 +45,19 @@ class CButton extends StatelessWidget {
           ),
         ),
       ),
-      child: child,
+      child: fullWidth
+          ? Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(CIcons.refresh),
+                if (labelText != null)
+                  Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: CText.body(labelText!),
+                  ),
+              ],
+            )
+          : child,
     );
   }
 }

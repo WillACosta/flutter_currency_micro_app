@@ -1,4 +1,4 @@
-import 'package:core_dependencies/main.dart';
+import 'package:core_dependencies/chopper_dependencies.dart';
 
 import '../converters/json_serializable_converter.dart';
 

@@ -22,8 +22,8 @@ It is a **work in progress** 🚧
 - **[App Modularization Guide](#app-modularization-guide)**
 - **[Technical Resources](#technical-resources)**
 - **[UI and Design](#ui-and-design)**
-<!-- - **[How to Use](#how-to-use)**
-- **[App Flow Sample](#app-flow-sample)** -->
+- **[Getting Started](#getting-started)**
+<!-- - **[App Flow Sample](#app-flow-sample)** -->
 
 <br>
 
@@ -101,3 +101,26 @@ of design tokens and atomic design, you can find more about in the
 
 The app has supports for dark and light mode, you can find all components and tokens
 in the `:core_ui` package.
+
+# Getting Started
+
+Follow these steps to configure and execute the project in your machine:
+
+1. First of all, you need the Flutter SDK and Android/iOS environments to
+   continue -- find more information about this [process here](https://docs.flutter.dev/get-started/install).
+
+2. After had finish the setup of your environment, go to the project directory,
+   and run the following command:
+
+```shell
+melos bootstrap
+```
+
+This command runs `flutter pub get` in all modules at the same time and run
+`build runner` when the dependencies are installed with successful.
+
+3. Finally run the app with:
+
+```shell
+flutter pub run
+```

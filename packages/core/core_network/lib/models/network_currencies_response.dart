@@ -1,4 +1,4 @@
-import 'package:core_dependencies/main.dart';
+import 'package:core_dependencies/equatable_dependencies.dart';
 
 class NetworkCurrenciesResponse extends Equatable {
   final Map<String, String> currencies;

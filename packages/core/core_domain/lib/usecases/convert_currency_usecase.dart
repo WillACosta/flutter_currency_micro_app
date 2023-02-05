@@ -1,6 +1,6 @@
+import 'package:core_dependencies/equatable_dependencies.dart';
 import 'package:core_commons/core_commons.dart';
 import 'package:core_data/core_data.dart';
-import 'package:core_dependencies/main.dart';
 
 import '../models/models.dart';
 

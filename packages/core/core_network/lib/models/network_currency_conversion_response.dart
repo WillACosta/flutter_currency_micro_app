@@ -1,6 +1,6 @@
 import 'dart:collection';
 
-import 'package:core_dependencies/main.dart';
+import 'package:core_dependencies/equatable_dependencies.dart';
 
 class NetworkCurrencyConversionResponse extends Equatable {
   final String baseCurrencyCode;

@@ -1,4 +1,5 @@
-import 'package:core_dependencies/main.dart';
+import 'package:core_dependencies/chopper_dependencies.dart';
+import 'package:core_dependencies/injectable_dependencies.dart';
 
 import '../models/models.dart';
 import '../utils/types/types.dart';

@@ -1,5 +1,5 @@
+import 'package:core_dependencies/chopper_dependencies.dart';
 import 'package:core_dependencies/fpdart_dependencies.dart';
-import 'package:core_dependencies/main.dart';
 
 import '../errors/failure/failure.dart';
 import '../types/either_types.dart';

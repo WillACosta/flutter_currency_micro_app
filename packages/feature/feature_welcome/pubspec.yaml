@@ -1,5 +1,6 @@
 name: feature_welcome
-description: Welcome feature for the app
+description: A Flutter package that implements Welcome Feature for the app.
+homepage: https://github.com/WillACosta/flutter_currency_micro_app
 publish_to: none
 version: 0.0.1
 
@@ -11,9 +12,16 @@ dependencies:
   flutter:
     sdk: flutter
 
+  core_dependencies:
+    path: '../../core/core_dependencies'
+
+  core_ui:
+    path: '../../core/core_ui'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   flutter_lints: ^2.0.0
 
 flutter:

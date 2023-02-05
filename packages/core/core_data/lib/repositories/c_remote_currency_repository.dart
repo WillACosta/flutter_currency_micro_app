@@ -1,6 +1,5 @@
 import 'package:core_commons/core_commons.dart';
 import 'package:core_domain/core_domain.dart';
-import 'package:core_domain/mappers/currencies_mapper.dart';
 import 'package:core_network/core_network.dart';
 
 import 'currency_repository.dart';

@@ -1,4 +1,4 @@
-import 'package:core_dependencies/main.dart';
+import 'package:core_dependencies/chopper_dependencies.dart';
 import 'package:core_dependencies/http_dependencies.dart' as http;
 import 'package:mocktail/mocktail.dart';
 

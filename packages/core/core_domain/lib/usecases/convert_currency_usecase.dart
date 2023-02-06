@@ -1,11 +1,13 @@
 import 'package:core_dependencies/equatable_dependencies.dart';
 import 'package:core_commons/core_commons.dart';
 import 'package:core_data/core_data.dart';
+import 'package:core_dependencies/injectable_dependencies.dart';
 
 import '../models/models.dart';
 
 typedef UseCaseType = AsyncEitherUseCase<CurrencyRates, ConvertCurrencyParams>;
 
+@Injectable()
 class ConvertCurrencyUseCase implements UseCaseType {
   final CurrencyRepository _repository;
   ConvertCurrencyUseCase(this._repository);

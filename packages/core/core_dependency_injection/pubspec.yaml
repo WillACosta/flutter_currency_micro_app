@@ -1,7 +1,7 @@
-name: core_network
-description: Network module
-version: 0.0.1
+name: core_dependency_injection
+description: Dependency injection manager
 publish_to: none
+version: 0.0.1
 
 environment:
   sdk: '>=2.19.0 <3.0.0'
@@ -14,11 +14,20 @@ dependencies:
   core_dependencies:
     path: '../core_dependencies'
 
+  core_data:
+    path: '../core_data'
+
+  core_network:
+    path: '../core_network'
+
+  core_domain:
+    path: '../core_domain'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  chopper_generator: ^6.0.0
+  flutter_lints: ^2.0.0
   build_runner: ^2.3.3
   injectable_generator: ^2.1.3
 

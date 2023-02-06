@@ -104,9 +104,16 @@ packages:
     source: path
     version: "0.0.1"
   core_dependencies:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
       path: "../packages/core/core_dependencies"
+      relative: true
+    source: path
+    version: "0.0.1"
+  core_dependency_injection:
+    dependency: "direct main"
+    description:
+      path: "../packages/core/core_dependency_injection"
       relative: true
     source: path
     version: "0.0.1"
@@ -233,6 +240,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   fpdart:
     dependency: transitive
     description:
@@ -273,6 +285,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  go_router:
+    dependency: transitive
+    description:
+      name: go_router
+      sha256: "9e8cee9969a9f33821a5594e5822d9a7ef3ae8528e5258f5178436e3deb0e095"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.3"
   http:
     dependency: transitive
     description:

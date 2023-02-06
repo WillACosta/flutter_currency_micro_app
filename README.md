@@ -20,8 +20,8 @@ It is a **work in progress** 🚧
 - **[Features](#features)**
 - **[Screenshots](##screenshots)**
 - **[App Modularization Guide](#app-modularization-guide)**
-- **[Technical Resources](#technical-resources)**
 - **[UI and Design](#ui-and-design)**
+- **[Technical Resources](#technical-resources)**
 - **[Getting Started](#getting-started)**
 <!-- - **[App Flow Sample](#app-flow-sample)** -->
 
@@ -101,6 +101,16 @@ of design tokens and atomic design, you can find more about in the
 
 The app has supports for dark and light mode, you can find all components and tokens
 in the `:core_ui` package.
+
+# Technical Resources
+
+- Clean Architecture and SOLID concepts
+- Modularization Approach with mono-repo
+- Mono-repo management with Melos CLI
+- Dependency Injection in multiple modules with `GetIt` and `Injectable`
+- Design System and tokens for UI
+- Lottie Animations
+- State management with Change Notifier
 
 # Getting Started
 

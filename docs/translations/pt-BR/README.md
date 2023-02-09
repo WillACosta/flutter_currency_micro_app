@@ -31,8 +31,9 @@ Esse projeto **está em desenvolvimento** 🚧
 
 # Funcionalidades
 
-O projeto possui duas _features_ principais, sendo elas: :feature_conversion`e`:feature_currencies_list`, você pode ver os detalhes
-na seção de [modularização do app]().
+O projeto possui duas _features_ principais, sendo elas: `:feature_conversion` e
+`:feature_currencies_list`, você pode ver os detalhes na seção de
+[modularização do app]().
 
 ## Capturas de tela
 

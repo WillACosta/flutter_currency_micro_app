@@ -1,3 +1,5 @@
+Language: [English](https://github.com/WillACosta/flutter_currency_micro_app) | [Português](https://github.com/WillACosta/flutter_currency_micro_app/tree/main/docs/translations/pt-BR)
+
 <h1 align="center">
   <img align="center" width ='80px' src="./app/assets/images/logo.png" alt="logo">
 </h1>
@@ -106,11 +108,12 @@ in the `:core_ui` package.
 
 - Clean Architecture and SOLID concepts
 - Modularization Approach with mono-repo
-- Mono-repo management with Melos CLI
+- Mono-repo management with `Melos CLI`
 - Dependency Injection in multiple modules with `GetIt` and `Injectable`
 - Design System and tokens for UI
 - Lottie Animations
-- State management with Change Notifier
+- Navigation system with `Go Router`
+- State management with `Change Notifier`
 
 # Getting Started
 

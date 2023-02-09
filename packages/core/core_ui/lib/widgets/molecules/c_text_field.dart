@@ -24,7 +24,7 @@ class CTextField extends StatelessWidget {
       controller: textController,
       cursorColor: CColors.text,
       maxLength: 10,
-      inputFormatters: [],
+      inputFormatters: const [],
       keyboardType: TextInputType.number,
       textDirection: TextDirection.rtl,
       onChanged: onChanged,

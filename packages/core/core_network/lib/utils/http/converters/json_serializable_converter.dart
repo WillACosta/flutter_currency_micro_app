@@ -24,7 +24,7 @@ class JsonSerializableConverter extends JsonConverter {
   ) async {
     final jsonRes = await super.convertError(response);
 
-    // TODO: swith Item to ResponseErrorCustomModel
+    // TODO: switch Item to ResponseErrorCustomModel
     return response.copyWith<ResultType>(
       bodyError: JsonTypeParser.decode<Item>(jsonRes.body),
     );

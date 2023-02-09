@@ -1,4 +1,4 @@
-# melos_managed_dependency_overrides: core_commons,core_data,core_dependencies,core_domain,core_network,core_test,core_ui,feature_conversion,feature_currencies_list,feature_welcome,core_dependency_injection
+# melos_managed_dependency_overrides: core_commons,core_data,core_dependencies,core_domain,core_network,core_test,core_ui,feature_conversion,feature_currencies_list,feature_welcome,core_dependency_injection,core_navigation
 dependency_overrides:
   core_commons:
     path: ../packages/core/core_commons
@@ -10,6 +10,8 @@ dependency_overrides:
     path: ../packages/core/core_dependency_injection
   core_domain:
     path: ../packages/core/core_domain
+  core_navigation:
+    path: ../packages/core/core_navigation
   core_network:
     path: ../packages/core/core_network
   core_test:

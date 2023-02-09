@@ -1,0 +1,20 @@
+# melos_managed_dependency_overrides: core_commons,core_data,core_dependencies,core_domain,core_network,core_test,core_ui,feature_currencies_list,feature_welcome
+dependency_overrides:
+  core_commons:
+    path: ../core_commons
+  core_data:
+    path: ../core_data
+  core_dependencies:
+    path: ../core_dependencies
+  core_domain:
+    path: ../core_domain
+  core_network:
+    path: ../core_network
+  core_test:
+    path: ../core_test
+  core_ui:
+    path: ../core_ui
+  feature_currencies_list:
+    path: ../../feature/feature_currencies_list
+  feature_welcome:
+    path: ../../feature/feature_welcome

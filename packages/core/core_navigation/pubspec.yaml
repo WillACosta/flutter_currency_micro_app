@@ -1,6 +1,5 @@
-name: feature_welcome
-description: A Flutter package that implements Welcome Feature for the app.
-homepage: https://github.com/WillACosta/flutter_currency_micro_app
+name: core_navigation
+description: This package contains all navigation related
 publish_to: none
 version: 0.0.1
 
@@ -15,11 +14,11 @@ dependencies:
   core_dependencies:
     path: '../../core/core_dependencies'
 
-  core_navigation:
-    path: '../../core/core_navigation'
+  feature_welcome:
+    path: '../../feature/feature_welcome'
 
-  core_ui:
-    path: '../../core/core_ui'
+  feature_currencies_list:
+    path: '../../feature/feature_currencies_list'
 
 dev_dependencies:
   flutter_test:

@@ -1,7 +1,6 @@
 name: flutter_currency_micro_app
-description: A new Flutter project.
+description: Currency App
 publish_to: 'none'
-
 
 version: 1.0.0+1
 
@@ -17,6 +16,9 @@ dependencies:
 
   core_dependency_injection:
     path: '../packages/core/core_dependency_injection'
+
+  core_navigation:
+    path: '../packages/core/core_navigation'
 
   feature_welcome:
     path: '../packages/feature/feature_welcome'

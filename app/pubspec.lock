@@ -124,6 +124,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  core_navigation:
+    dependency: "direct main"
+    description:
+      path: "../packages/core/core_navigation"
+      relative: true
+    source: path
+    version: "0.0.1"
   core_network:
     dependency: "direct overridden"
     description:

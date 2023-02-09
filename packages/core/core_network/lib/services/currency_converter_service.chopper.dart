@@ -37,8 +37,8 @@ class _$CurrencyApiService extends CurrencyApiService {
     final Uri $url = Uri.parse('/currency/convert');
     final Map<String, dynamic> $params = <String, dynamic>{
       'from': from,
-      'from': to,
-      'from': amount,
+      'to': to,
+      'amount': amount,
     };
     final Request $request = Request(
       'GET',

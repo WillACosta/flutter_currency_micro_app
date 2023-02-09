@@ -2,9 +2,9 @@ import 'package:core_dependencies/chopper_dependencies.dart';
 import 'package:core_dependencies/injectable_dependencies.dart';
 
 import '../models/models.dart';
-import '../utils/types/types.dart';
 import '../utils/constants/currency_endpoints.dart';
 import '../utils/http/client/api_client.dart';
+import '../utils/types/types.dart';
 
 part 'currency_converter_service.chopper.dart';
 
@@ -22,7 +22,7 @@ abstract class CurrencyApiService extends ChopperService {
   @Get(path: CurrencyEndpoints.convertCurrency)
   AsyncResponse<NetworkCurrencyConversionResponse> convertCurrency(
     @Query('from') String from,
-    @Query('from') String to,
-    @Query('from') String amount,
+    @Query('to') String to,
+    @Query('amount') String amount,
   );
 }

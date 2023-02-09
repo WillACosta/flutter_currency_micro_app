@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
-
+import 'package:core_dependencies/go_router_dependencies.dart';
 import 'package:core_dependencies/lottie_dependencies.dart';
+import 'package:core_navigation/core_navigation.dart';
 import 'package:core_ui/core_ui.dart';
+import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -36,8 +37,9 @@ class WelcomeScreen extends StatelessWidget {
                   ],
                 ),
                 const Spacer(),
-                const CButton.floating(
-                  child: Icon(
+                CButton.floating(
+                  onPressed: () => context.pushNamed(AppRoutes.home.name),
+                  child: const Icon(
                     CIcons.chevronRight,
                     size: 30,
                     color: CColors.white,

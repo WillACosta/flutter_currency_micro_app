@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:core_ui/core_ui.dart';
+import 'package:flutter/material.dart';
 
 class CurrenciesListScreen extends StatelessWidget {
   const CurrenciesListScreen({super.key});
@@ -25,6 +25,7 @@ class CurrenciesListScreen extends StatelessWidget {
               const CAmountRow(label: 'Amount'),
               CSpacingStack.lg,
               CDropdownButton(items: _items),
+              const Divider(color: CColors.text),
               CDropdownButton(items: _items),
               CSpacingStack.lg,
               CButton(

@@ -24,8 +24,10 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i3.CurrencyListViewModel>(
-        () => _i3.CurrencyListViewModel(gh<_i4.ListAllCurrenciesUseCase>()));
+    gh.factory<_i3.CurrencyListViewModel>(() => _i3.CurrencyListViewModel(
+          gh<_i4.ListAllCurrenciesUseCase>(),
+          gh<_i4.ConvertCurrencyUseCase>(),
+        ));
     return this;
   }
 }

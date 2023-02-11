@@ -11,6 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  core_commons:
+    path: '../../core/core_commons'
+
   core_dependencies:
     path: '../../core/core_dependencies'
 

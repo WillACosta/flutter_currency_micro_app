@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 
 class CDropdownButton extends StatelessWidget {
   final List<Currency> items;
+  final void Function(Currency?)? onChanged;
 
-  const CDropdownButton({super.key, required this.items});
+  const CDropdownButton({super.key, required this.items, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField(
       isExpanded: true,
-      onChanged: (value) {},
+      onChanged: onChanged,
       dropdownColor: CColors.background,
       icon: const Icon(CIcons.chevronDown),
       decoration: const InputDecoration(

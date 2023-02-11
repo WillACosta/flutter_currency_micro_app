@@ -1,6 +1,6 @@
-import 'package:core_dependencies/equatable_dependencies.dart';
 import 'package:core_commons/core_commons.dart';
 import 'package:core_data/core_data.dart';
+import 'package:core_dependencies/equatable_dependencies.dart';
 import 'package:core_dependencies/injectable_dependencies.dart';
 
 import '../models/models.dart';
@@ -17,7 +17,7 @@ class ConvertCurrencyUseCase implements UseCaseType {
     return await _repository.convertCurrency(
       from: params.from,
       to: params.to,
-      amount: params.toString(),
+      amount: params.amount.toString(),
     );
   }
 }

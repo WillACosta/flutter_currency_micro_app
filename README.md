@@ -135,5 +135,5 @@ This command runs `flutter pub get` in all modules at the same time and run
 3. Finally run the app with:
 
 ```shell
-flutter pub run
+flutter run
 ```

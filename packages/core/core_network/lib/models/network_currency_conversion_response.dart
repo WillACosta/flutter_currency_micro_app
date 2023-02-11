@@ -31,13 +31,25 @@ class NetworkCurrencyConversionResponse extends Equatable {
 
   factory NetworkCurrencyConversionResponse.fromMap(Map<String, dynamic> map) {
     return NetworkCurrencyConversionResponse(
-      baseCurrencyCode: map['baseCurrencyCode'] ?? '',
-      baseCurrencyName: map['baseCurrencyName'] ?? '',
+      baseCurrencyCode: map['base_currency_code'] ?? '',
+      baseCurrencyName: map['base_currency_ame'] ?? '',
       amount: map['amount'] ?? '',
-      updatedDate: DateTime.fromMillisecondsSinceEpoch(map['updatedDate']),
-      rates: HashMap<String, Rates>.from(map['rates']),
+      updatedDate: DateTime.parse(map['updated_date']),
+      rates: _parseRates(map['rates']),
       status: map['status'] ?? '',
     );
+  }
+
+  static HashMap<String, Rates> _parseRates(
+    Map<String, dynamic> rates,
+  ) {
+    HashMap<String, Rates> hashMap = HashMap();
+
+    rates.entries.forEach((e) {
+      hashMap.addAll({e.key: Rates.fromMap(e.value)});
+    });
+
+    return hashMap;
   }
 }
 
@@ -57,9 +69,9 @@ class Rates extends Equatable {
 
   factory Rates.fromMap(Map<String, dynamic> map) {
     return Rates(
-      currencyName: map['currencyName'] ?? '',
+      currencyName: map['currency_name'] ?? '',
       rate: map['rate'] ?? '',
-      rateForAmount: map['rateForAmount'] ?? '',
+      rateForAmount: map['rate_for_amount'] ?? '',
     );
   }
 }

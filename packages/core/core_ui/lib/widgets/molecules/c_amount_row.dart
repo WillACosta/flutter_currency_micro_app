@@ -7,6 +7,7 @@ class CAmountRow extends StatelessWidget {
   final bool enabled;
   final String? currencyCode;
   final void Function(String)? onChanged;
+  final String? value;
 
   const CAmountRow({
     super.key,
@@ -14,6 +15,7 @@ class CAmountRow extends StatelessWidget {
     required this.label,
     this.currencyCode,
     this.enabled = true,
+    this.value,
   });
 
   bool get _hasCurrencyCode => currencyCode != null;
@@ -30,7 +32,10 @@ class CAmountRow extends StatelessWidget {
               ? Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    CTextField(onChanged: onChanged),
+                    CTextField(
+                      initialValue: value,
+                      onChanged: onChanged,
+                    ),
                     CText.body(
                       currencyCode!.toUpperCase(),
                       color: CColors.text,
@@ -38,6 +43,7 @@ class CAmountRow extends StatelessWidget {
                   ],
                 )
               : CTextField(
+                  initialValue: value,
                   onChanged: onChanged,
                   enabled: enabled,
                 ),

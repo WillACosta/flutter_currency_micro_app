@@ -5,6 +5,7 @@ import '../../core_ui.dart';
 class CTextField extends StatelessWidget {
   final TextEditingController? textController;
   final String? labelText;
+  final String? initialValue;
   final String hintText;
   final void Function(String)? onChanged;
   final bool enabled;
@@ -16,11 +17,13 @@ class CTextField extends StatelessWidget {
     this.hintText = '0.00',
     this.onChanged,
     this.enabled = true,
+    this.initialValue,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      initialValue: initialValue,
       controller: textController,
       cursorColor: CColors.text,
       maxLength: 10,

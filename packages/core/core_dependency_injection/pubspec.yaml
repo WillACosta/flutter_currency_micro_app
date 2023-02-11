@@ -23,6 +23,9 @@ dependencies:
   core_domain:
     path: '../core_domain'
 
+  feature_currencies_list:
+    path: '../../feature/feature_currencies_list'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

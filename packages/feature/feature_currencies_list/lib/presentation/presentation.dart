@@ -1,1 +1,1 @@
-export 'currency_list_screen.dart';
+export 'currency_list/currency_list_screen.dart';

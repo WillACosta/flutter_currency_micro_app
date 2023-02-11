@@ -5,14 +5,27 @@ import 'package:core_dependencies/injectable_dependencies.dart';
 
 import '../models/currencies.dart';
 
-@Injectable()
-class ListAllCurrenciesUseCase implements AsyncEitherUseCase<Currencies, Unit> {
+@injectable
+class ListAllCurrenciesUseCase
+    implements AsyncEitherUseCase<List<Currency>, Unit> {
   final CurrencyRepository _repository;
 
   ListAllCurrenciesUseCase(this._repository);
 
   @override
-  AsyncEither<Currencies> call(Unit params) async {
-    return await _repository.listCurrencies();
+  AsyncEither<List<Currency>> call(Unit params) async {
+    final result = await _repository.listCurrencies();
+
+    return result.map<List<Currency>>((map) {
+      return map.currencies.entries
+          .map(
+            (e) => Currency(
+              code: e.key,
+              fullName: e.value,
+              displayCurrencyText: '${e.key} - ${e.value}',
+            ),
+          )
+          .toList();
+    });
   }
 }

@@ -5,9 +5,9 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:core_network/external/external.dart' as _i5;
-import 'package:core_network/external/http/client/api_client.dart' as _i3;
-import 'package:core_network/services/currency_converter_service.dart' as _i4;
+import 'package:core_domain/core_domain.dart' as _i4;
+import 'package:feature_currencies_list/presentation/currency_list/currency_list_vm.dart'
+    as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
@@ -24,9 +24,8 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.lazySingleton<_i3.ApiClient>(() => _i3.ApiClient());
-    gh.factory<_i4.CurrencyApiService>(
-        () => _i4.CurrencyApiService.create(gh<_i5.ApiClient>()));
+    gh.factory<_i3.CurrencyListViewModel>(
+        () => _i3.CurrencyListViewModel(gh<_i4.ListAllCurrenciesUseCase>()));
     return this;
   }
 }

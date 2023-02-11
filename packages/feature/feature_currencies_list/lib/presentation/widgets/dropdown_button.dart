@@ -1,9 +1,9 @@
+import 'package:core_domain/core_domain.dart';
+import 'package:core_ui/core_ui.dart';
 import 'package:flutter/material.dart';
 
-import '../../core_ui.dart';
-
 class CDropdownButton extends StatelessWidget {
-  final List<String> items;
+  final List<Currency> items;
 
   const CDropdownButton({super.key, required this.items});
 
@@ -25,7 +25,7 @@ class CDropdownButton extends StatelessWidget {
           .map(
             (e) => DropdownMenuItem(
               value: e,
-              child: CText.body(e),
+              child: CText.body(e.displayCurrencyText),
             ),
           )
           .toList(),

@@ -1,4 +1,4 @@
-# melos_managed_dependency_overrides: core_commons,core_data,core_dependencies,core_domain,core_network,core_test,core_ui
+# melos_managed_dependency_overrides: core_commons,core_data,core_dependencies,core_domain,core_network,core_test,core_ui,core_dependency_injection
 dependency_overrides:
   core_commons:
     path: ../../core/core_commons
@@ -6,6 +6,8 @@ dependency_overrides:
     path: ../../core/core_data
   core_dependencies:
     path: ../../core/core_dependencies
+  core_dependency_injection:
+    path: ../../core/core_dependency_injection
   core_domain:
     path: ../../core/core_domain
   core_network:

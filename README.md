@@ -31,7 +31,7 @@ It is a **work in progress** 🚧
 
 # Features
 
-The project has only two features, called `:feature_conversion` and
+The project has only two features, called `:feature_welcome` and
 `:feature_currencies_list`, you can see more details in the [app modularization
 guide](#app-modularization-guide).
 

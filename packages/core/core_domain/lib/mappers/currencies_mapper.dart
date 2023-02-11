@@ -2,9 +2,18 @@ import 'package:core_dependencies/fpdart_dependencies.dart';
 import 'package:core_domain/models/models.dart';
 import 'package:core_network/core_network.dart';
 
-extension CurrenciesExtension on NetworkCurrenciesResponse {
-  Currencies toCurrencies() {
-    return Currencies(currencies);
+extension CurrencyExtensions on NetworkCurrenciesResponse {
+  List<Currency> toListOfCurrency() {
+    return currencies.entries.map((object) {
+      final key = object.key;
+      final value = object.value;
+
+      return Currency(
+        code: key,
+        fullName: value,
+        displayCurrencyText: '$key - $value',
+      );
+    }).toList();
   }
 }
 

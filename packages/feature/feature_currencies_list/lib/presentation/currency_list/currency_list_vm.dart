@@ -6,9 +6,10 @@ import 'package:core_domain/core_domain.dart';
 @injectable
 class CurrencyListViewModel {
   final ListAllCurrenciesUseCase _useCase;
+  final _currenciesList = BehaviorSubject<List<Currency>>();
 
   Stream get stream => _currenciesList.stream;
-  final _currenciesList = BehaviorSubject<List<Currency>>();
+  Sink get _sink => _currenciesList.sink;
 
   CurrencyListViewModel(this._useCase) {
     _init();
@@ -24,6 +25,6 @@ class CurrencyListViewModel {
   }
 
   _updateCurrencies(List<Currency> currencies) {
-    _currenciesList.sink.add(currencies);
+    _sink.add(currencies);
   }
 }

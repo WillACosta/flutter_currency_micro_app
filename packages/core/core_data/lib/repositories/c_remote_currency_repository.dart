@@ -12,9 +12,9 @@ class CRemoteCurrencyRepository implements CurrencyRepository {
   CRemoteCurrencyRepository(this._service);
 
   @override
-  AsyncEither<Currencies> listCurrencies() async {
+  AsyncEither<List<Currency>> listCurrencies() async {
     final foldable = await safeApiCall(() => _service.listAllCurrencies());
-    return foldable.map((r) => r.toCurrencies());
+    return foldable.map((r) => r.toListOfCurrency());
   }
 
   @override

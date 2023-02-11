@@ -14,18 +14,6 @@ class ListAllCurrenciesUseCase
 
   @override
   AsyncEither<List<Currency>> call(Unit params) async {
-    final result = await _repository.listCurrencies();
-
-    return result.map<List<Currency>>((map) {
-      return map.currencies.entries
-          .map(
-            (e) => Currency(
-              code: e.key,
-              fullName: e.value,
-              displayCurrencyText: '${e.key} - ${e.value}',
-            ),
-          )
-          .toList();
-    });
+    return await _repository.listCurrencies();
   }
 }

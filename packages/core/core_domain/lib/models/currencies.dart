@@ -14,12 +14,3 @@ class Currency extends Equatable {
   @override
   List<Object?> get props => [code, fullName];
 }
-
-class Currencies extends Equatable {
-  final Map<String, String> currencies;
-
-  const Currencies(this.currencies);
-
-  @override
-  List<Object?> get props => [currencies];
-}

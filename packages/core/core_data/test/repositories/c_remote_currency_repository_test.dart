@@ -1,13 +1,12 @@
 import 'dart:collection';
 
-import 'package:core_domain/core_domain.dart';
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:core_commons/core_commons.dart';
+import 'package:core_data/repositories/c_remote_currency_repository.dart';
 import 'package:core_dependencies/fpdart_dependencies.dart';
+import 'package:core_domain/core_domain.dart';
 import 'package:core_network/core_network.dart';
 import 'package:core_test/core_test.dart';
-import 'package:core_data/repositories/c_remote_currency_repository.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
 void main() {
@@ -40,7 +39,7 @@ void main() {
 
         final actual = await repository.listCurrencies();
 
-        expect(actual, isA<Right<Failure, Currencies>>());
+        expect(actual, isA<Right<Failure, List<Currency>>>());
         verify(() => service.listAllCurrencies());
       },
     );

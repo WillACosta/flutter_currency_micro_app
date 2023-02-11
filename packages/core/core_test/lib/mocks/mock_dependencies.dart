@@ -8,7 +8,18 @@ abstract class MockCurrencies {
     'CLP': 'Chilian Peso',
   };
 
-  static const currenciesList = Currencies(_currencyRate);
+  static final currenciesList = List.of([
+    const Currency(
+      code: 'USD',
+      fullName: 'United States Dollar',
+      displayCurrencyText: 'USD - United States Dollar',
+    ),
+    const Currency(
+      code: 'BRL',
+      fullName: 'Brazilian Real',
+      displayCurrencyText: 'BRL - Brazilian Real',
+    ),
+  ]);
 
   static final currencyRates = CurrencyRates(
     fromCurrencyCode: 'USD',

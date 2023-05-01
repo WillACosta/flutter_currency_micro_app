@@ -6,21 +6,26 @@ import 'package:core_domain/core_domain.dart';
 
 @injectable
 class CurrencyListViewModel {
-  final ListAllCurrenciesUseCase _useCase;
+  final ListAllCurrenciesUseCase _listCurrenciesUseCase;
   final ConvertCurrencyUseCase _convertCurrencyUseCase;
 
   final _currenciesList = BehaviorSubject<List<Currency>>();
   final _currencyRates = BehaviorSubject<CurrencyRates>();
   final _amountValue = BehaviorSubject<double>();
+
   final _fromCurrency = BehaviorSubject<String>();
   final _toCurrency = BehaviorSubject<String>();
+
   final _error = BehaviorSubject<String?>();
 
   Stream<List<Currency>> get currenciesStream => _currenciesList.stream;
   Stream<CurrencyRates> get currencyRatesStream => _currencyRates.stream;
   Stream<String?> get errorStream => _error.stream;
 
-  CurrencyListViewModel(this._useCase, this._convertCurrencyUseCase) {
+  CurrencyListViewModel(
+    this._listCurrenciesUseCase,
+    this._convertCurrencyUseCase,
+  ) {
     _init();
   }
 
@@ -53,9 +58,9 @@ class CurrencyListViewModel {
   }
 
   _init() async {
-    final resultOrError = await _useCase(unit);
+    final foldable = await _listCurrenciesUseCase(unit);
 
-    resultOrError.fold(
+    foldable.fold(
       (l) => _updateCurrencies([]),
       (r) => _updateCurrencies(r),
     );

@@ -5,19 +5,27 @@ import 'package:flutter/material.dart';
 class CDropdownButton extends StatelessWidget {
   final List<Currency> items;
   final void Function(Currency?)? onChanged;
+  final Currency? initialValue;
 
-  const CDropdownButton({super.key, required this.items, this.onChanged});
+  const CDropdownButton({
+    super.key,
+    required this.items,
+    this.onChanged,
+    this.initialValue,
+  });
 
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField(
       isExpanded: true,
       onChanged: onChanged,
+      value: initialValue,
       dropdownColor: CColors.background,
       icon: const Icon(CIcons.chevronDown),
       decoration: const InputDecoration(
+        hintText: 'Select an Currency',
         hintStyle: TextStyle(
-          color: CColors.white,
+          color: CColors.text,
           fontSize: CFontSize.body,
         ),
         border: InputBorder.none,

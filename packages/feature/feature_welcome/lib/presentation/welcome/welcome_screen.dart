@@ -31,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
                     CText.bodyHead('Convert a currency was never too easy'),
                     CSpacingStack.xxxs,
                     CText.bodySmall(
-                      'The best way is here, waiting for you',
+                      'The best way is here, waiting for you.',
                       color: CColors.text,
                     )
                   ],

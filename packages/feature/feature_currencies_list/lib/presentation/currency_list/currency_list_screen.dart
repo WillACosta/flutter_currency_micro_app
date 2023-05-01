@@ -1,9 +1,9 @@
 import 'package:core_commons/core_commons.dart';
 import 'package:core_dependency_injection/core_dependency_injection.dart';
 import 'package:core_ui/core_ui.dart';
+import 'package:feature_currencies_list/presentation/currency_list_view.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/widgets.dart';
 import 'currency_list_vm.dart';
 
 class CurrenciesListScreen extends StatefulWidget {
@@ -47,33 +47,9 @@ class _CurrenciesListScreenState extends State<CurrenciesListScreen> {
                 onChanged: vm.onChangeAmountValue,
               ),
               CSpacingStack.lg,
-              StreamBuilder(
-                stream: vm.currenciesStream,
-                builder: (_, snapshot) {
-                  if (snapshot.hasData) {
-                    return CDropdownButton(
-                      items: snapshot.data!,
-                      onChanged: vm.onChangeFromCurrency,
-                    );
-                  }
-
-                  return const SizedBox.shrink();
-                },
-              ),
+              const CurrencyListView(),
               const Divider(color: CColors.text),
-              StreamBuilder(
-                stream: vm.currenciesStream,
-                builder: (_, snapshot) {
-                  if (snapshot.hasData) {
-                    return CDropdownButton(
-                      items: snapshot.data!,
-                      onChanged: vm.onChangeToCurrency,
-                    );
-                  }
-
-                  return const SizedBox.shrink();
-                },
-              ),
+              const CurrencyListView(),
               CSpacingStack.lg,
               CButton(
                 onPressed: vm.onConvert,

@@ -9,7 +9,9 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:core_domain/core_domain.dart' as _i4;
+import 'package:core_domain/core_domain.dart' as _i5;
+import 'package:feature_conversion/presentation/store/c_conversion_store.dart'
+    as _i4;
 import 'package:feature_conversion/presentation/store/conversion_store.dart'
     as _i3;
 import 'package:get_it/get_it.dart' as _i1;
@@ -27,7 +29,7 @@ extension GetItInjectableX on _i1.GetIt {
       environmentFilter,
     );
     gh.singleton<_i3.ConversionStore>(
-        _i3.CConversionStore(gh<_i4.ConvertCurrencyUseCase>()));
+        _i4.CConversionStore(gh<_i5.ConvertCurrencyUseCase>()));
     return this;
   }
 }

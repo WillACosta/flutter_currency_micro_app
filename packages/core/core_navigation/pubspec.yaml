@@ -4,7 +4,7 @@ publish_to: none
 version: 0.0.1
 
 environment:
-  sdk: '>=2.19.0 <3.0.0'
+  sdk: ">=2.19.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -12,13 +12,13 @@ dependencies:
     sdk: flutter
 
   core_dependencies:
-    path: '../../core/core_dependencies'
+    path: "../../core/core_dependencies"
 
   feature_welcome:
-    path: '../../feature/feature_welcome'
+    path: "../../feature/feature_welcome"
 
-  feature_currencies_list:
-    path: '../../feature/feature_currencies_list'
+  feature_conversion:
+    path: "../../feature/feature_conversion"
 
 dev_dependencies:
   flutter_test:

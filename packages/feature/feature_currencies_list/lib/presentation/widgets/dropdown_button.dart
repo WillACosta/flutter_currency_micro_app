@@ -23,7 +23,7 @@ class CDropdownButton extends StatelessWidget {
       dropdownColor: CColors.background,
       icon: const Icon(CIcons.chevronDown),
       decoration: const InputDecoration(
-        hintText: 'Select an Currency',
+        hintText: 'Select a currency',
         hintStyle: TextStyle(
           color: CColors.text,
           fontSize: CFontSize.body,

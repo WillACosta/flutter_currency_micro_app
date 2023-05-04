@@ -4,6 +4,6 @@ import 'package:core_dependencies/injectable_dependencies.dart';
 import './configure_di.config.dart';
 
 @InjectableInit(initializerName: r'$initModuleGetIt')
-void configureDataModuleDI(GetIt getItInstance) {
+void configureCurrencyConversionModuleDI(GetIt getItInstance) {
   getItInstance.$initModuleGetIt();
 }

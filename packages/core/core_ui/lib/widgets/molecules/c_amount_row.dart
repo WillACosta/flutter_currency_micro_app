@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 
 import '../../core_ui.dart';
 
-class CAmountRow extends StatelessWidget {
+class CAmountRow extends StatefulWidget {
   final String label;
   final bool enabled;
   final String? currencyCode;
@@ -18,7 +18,17 @@ class CAmountRow extends StatelessWidget {
     this.value,
   });
 
-  bool get _hasCurrencyCode => currencyCode != null;
+  @override
+  State<CAmountRow> createState() => _CAmountRowState();
+}
+
+class _CAmountRowState extends State<CAmountRow> {
+  bool get _hasCurrencyCode => widget.currencyCode != null;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,26 +36,26 @@ class CAmountRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CText.bodyHead(label),
+        CText.bodyHead(widget.label),
         Expanded(
           child: _hasCurrencyCode
               ? Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    CTextField(
-                      initialValue: value,
-                      onChanged: onChanged,
+                    CText.headline(
+                      widget.value!.toUpperCase(),
+                      color: CColors.text,
+                      fontWeight: FontWeight.bold,
                     ),
                     CText.body(
-                      currencyCode!.toUpperCase(),
+                      widget.currencyCode!.toUpperCase(),
                       color: CColors.text,
                     ),
                   ],
                 )
               : CTextField(
-                  initialValue: value,
-                  onChanged: onChanged,
-                  enabled: enabled,
+                  onChanged: widget.onChanged,
+                  enabled: widget.enabled,
                 ),
         ),
       ],

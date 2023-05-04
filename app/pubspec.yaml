@@ -23,8 +23,8 @@ dependencies:
   feature_welcome:
     path: "../packages/feature/feature_welcome"
 
-  feature_currencies_list:
-    path: "../packages/feature/feature_currencies_list"
+  feature_conversion:
+    path: "../packages/feature/feature_conversion"
 
   cupertino_icons: ^1.0.2
 

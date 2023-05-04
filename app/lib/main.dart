@@ -5,8 +5,8 @@ import 'app.dart';
 import 'external/environment/setup_dotenv.dart';
 
 Future<void> main() async {
-  configureDependencies();
   await setUpDotEnv();
+  configureDependencies();
 
   runApp(const CurrencyApp());
 }

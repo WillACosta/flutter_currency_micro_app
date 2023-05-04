@@ -1,3 +1,3 @@
 library feature_currency_list;
 
-export 'presentation/presentation.dart';
+export './presentation/currency_list_view.dart';

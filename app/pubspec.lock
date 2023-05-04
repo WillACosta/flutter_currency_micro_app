@@ -200,8 +200,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  feature_currencies_list:
+  feature_conversion:
     dependency: "direct main"
+    description:
+      path: "../packages/feature/feature_conversion"
+      relative: true
+    source: path
+    version: "0.0.1"
+  feature_currencies_list:
+    dependency: "direct overridden"
     description:
       path: "../packages/feature/feature_currencies_list"
       relative: true

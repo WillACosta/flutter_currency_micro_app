@@ -1,3 +1,4 @@
+import 'package:core_commons/core_commons.dart';
 import 'package:core_dependency_injection/core_dependency_injection.dart';
 import 'package:core_domain/core_domain.dart';
 import 'package:feature_currencies_list/presentation/currency_list_store.dart';
@@ -19,16 +20,23 @@ class _CurrencyListViewState extends State<CurrencyListView> {
   void initState() {
     store.init();
     _setListeners();
-
     super.initState();
   }
 
-  _setListeners() {
-    store.state.addListener(() {
-      if (store.state.value == ListCurrenciesState.error) {
-        // TODO: show snackbar
-      }
-    });
+  @override
+  void dispose() {
+    store.state.removeListener(_handleStateChange);
+    super.dispose();
+  }
+
+  void _setListeners() {
+    store.state.addListener(_handleStateChange);
+  }
+
+  void _handleStateChange() {
+    if (store.state.value == ViewState.error) {
+      context.showSnackBar(message: store.errorMessage, error: true);
+    }
   }
 
   @override
@@ -37,8 +45,8 @@ class _CurrencyListViewState extends State<CurrencyListView> {
       valueListenable: store.state,
       builder: (_, state, __) {
         final shouldShowProgress = [
-          ListCurrenciesState.loading,
-          ListCurrenciesState.initial
+          ViewState.loading,
+          ViewState.initial,
         ].contains(state);
 
         if (shouldShowProgress) {

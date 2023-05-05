@@ -1,3 +1,4 @@
+import 'package:core_commons/core_commons.dart';
 import 'package:core_dependencies/injectable_dependencies.dart';
 import 'package:core_domain/core_domain.dart';
 import 'package:flutter/widgets.dart';
@@ -29,7 +30,10 @@ class CConversionStore implements ConversionStore {
     final desireCurrency = _desireCurrency?.code;
 
     final params = ConvertCurrencyParams(
-        from: originCurrency!, to: desireCurrency!, amount: _amount);
+      from: originCurrency!,
+      to: desireCurrency!,
+      amount: _amount,
+    );
 
     final foldable = await _convertCurrencyUseCase(params);
 

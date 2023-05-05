@@ -31,8 +31,8 @@ It is a **work in progress** 🚧
 
 # Features
 
-The project has only two features, called `:feature_welcome` and
-`:feature_currencies_list`, you can see more details in the [app modularization
+The project has only three features, `:feature_welcome`, `:feature_conversion` and
+`:feature_currencies_list`, you can see more details in [app modularization
 guide](#app-modularization-guide).
 
 ## Screenshots
@@ -41,7 +41,7 @@ guide](#app-modularization-guide).
 
 # App Modularization Guide
 
-The project uses an modularization approach with mono-repo, to organize
+The project uses a modularization approach with mono-repo, to organize
 and breaking the concept of monolithic into loosely coupled, self contained
 modules.
 
@@ -63,9 +63,9 @@ The project contains the following types of modules:
   but they shouldn’t depend on feature or app modules.
 
 All these modules are managed by Melos CLI, with this tool, we have more control
-over the dependencies in the whole project and executes common tasks in all modules
-in the same time -- [know more about Melos here](https://melos.invertase.dev/).
-You can see, some scripts that is used by the project on `melos.yaml` file in the
+over the dependencies in the entire project and we able to execute common tasks in all modules
+at the same time -- [know more about Melos here](https://melos.invertase.dev/).
+You can find, some scripts that is used by the project on `melos.yaml` file in the
 root directory.
 
 As a mentioned above, the project uses an mono-repo approach to organize all
@@ -98,7 +98,7 @@ Some advantages of this approach:
 # UI and Design
 
 The app was designed with an simple and minimalist purpose, we use the concepts
-of design tokens and atomic design, you can find more about in the
+of design tokens and atomic design, you can check on
 [figma file](https://www.figma.com/file/aBGCDeRuqnngXxhlY4p2O9/Currency-Converter-App-Case-Study?node-id=45%3A39&t=5egYOZqyjrlwngih-1).
 
 The app has supports for dark and light mode, you can find all components and tokens
@@ -113,7 +113,7 @@ in the `:core_ui` package.
 - Design System and tokens for UI
 - Lottie Animations
 - Navigation system with `Go Router`
-- State management with `Change Notifier`
+- State management with `Value Notifier`
 
 # Getting Started
 
@@ -132,7 +132,7 @@ melos bootstrap
 This command runs `flutter pub get` in all modules at the same time and run
 `build runner` when the dependencies are installed with successful.
 
-3. Finally run the app with:
+3. At last, run the app with:
 
 ```shell
 flutter run

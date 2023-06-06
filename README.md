@@ -10,12 +10,7 @@ Language: [English](https://github.com/WillACosta/flutter_currency_micro_app) | 
   <a href="https://www.instagram.com/wiidev/"><img alt="Instagram Profile" src="https://badges.aleen42.com/src/instagram.svg"/></a>
 </p>
 
-Currency Converter App, provides a simple way to convert any currency. The main idea
-for this project, is for studying and apply modularization with mono-repo and
-managed by Melos CLI, it follows some development best practices, such as Clean
-Architecture, Clean Code, SOLID, and even more.
-
-It is a **work in progress** 🚧
+Currency Converter App provides a simple way to convert any currency. The main idea for this project is to study and apply modularization with mono-repo and managed by Melos CLI, it follows some development best practices, such as Clean Architecture, Clean Code, SOLID, and so on.
 
 # Content
 
